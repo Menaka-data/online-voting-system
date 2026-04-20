@@ -1,0 +1,128 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Center wrapper */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Glass container */
+.container {
+    width: 100%;
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ff7eb3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Grid for dashboard */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* Cards */
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Flash messages */
+.flash {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.success { background: #2ecc71; }
+.error { background: #e74c3c; }
+.info { background: #3498db; }
+
+/* Links */
+a {
+    color: white;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsive */
+/* Better mobile layout */
+@media (max-width: 600px) {
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* single column */
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    a {
+        margin-top: 15px;
+    }
+}

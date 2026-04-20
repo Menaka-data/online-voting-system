@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="wrapper">
+<div class="container" style="max-width:900px;">
+
+<h2>Vote Your Candidate</h2>
+
+{% if voted %}
+<p style="text-align:center;">✅ You have already voted</p>
+{% endif %}
+
+<div class="grid">
+{% for c in candidates %}
+<div class="card">
+
+<h3>{{c.name}}</h3>
+
+{% if not voted %}
+<a href="/vote/{{c.id}}">
+<button>Vote</button>
+</a>
+{% else %}
+<p>✔ Voted</p>
+{% endif %}
+
+</div>
+{% endfor %}
+</div>
+
+<a href="/logout">Logout</a>
+
+</div>
+</div>
+
+</body>
+</html>
